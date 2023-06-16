@@ -1,1 +1,1 @@
-# En este repositorio se encuentra un archivo R del tipo Shiny, el cual se debe descargar y ejecutar localmente en su computador, junto con al base de datos .csv incluida en la misma carpeta que el código.
+En este repositorio se encuentra un archivo R del tipo Shiny, el cual se debe descargar y ejecutar localmente en su computador, junto con al base de datos .csv incluida en la misma carpeta que el código.
