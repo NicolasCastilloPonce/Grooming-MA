@@ -1,0 +1,103 @@
+Identificador;Dataset;Anio;Modelo;ACC;P;R;F1;F05;F2;S;N;Comentarios;Tipo_de_Algoritmo
+agarwal2022;PAN12;2022;MLP;;0.98;0.99;0.98;0.98;;;22337;El modelo completo es BERT-PCD (Predatory Conversation Detection). Es FNN pero Fully = MLP;Deep Learning
+amuchi2012;Chat privado;2012;Naive Bayes;0.85;;;;;;;341;;Tradicional
+amuchi2012;Chat privado;2012;SVM;0.86;;;;;;;341;Lineal;Tradicional
+amuchi2012;Chat privado;2012;Bayesian Regression;0.6;;;;;;;341;;Tradicional
+anderson2019;PJ y PAN13;2019;Naive Bayes;0.59;;;;;;;1200;Gaussian;Tradicional
+anderson2019;PJ y PAN13;2019;Random Forest;0.58;;;;;;;1200;120 featrues. Solamente habla de dataset de entrenamiento, no de testing;Tradicional
+anderson2019;PJ y PAN13;2019;Adaboost;0.6;;;;;;;1200;180 features;Tradicional
+anderson2019;PJ y PAN13;2019;Logistic Regression;0.61;;;;;;;1200;150 features;Tradicional
+anderson2019;PJ y PAN13;2019;SVM;0.61;;;;;;;1200;120 features;Tradicional
+andleeb2019;PJ-MySpace;2019;Naive Bayes;0.87;0.68;;0.82;;;;600;;Tradicional
+andleeb2019;PJ-MySpace;2019;SVM;0.84;0.92;;0.87;;;;600;Lineal;Tradicional
+ashcroft2015;PAN12 y 13;2015;Adaboost;0.59;;;;;;;2000;Chat-adult y kid;Tradicional
+bogdanova2014;PJ-CyberSEX-NPS;2014;SVM;0.97;;;;;;;;Se deja fuera del metanalisis por no explicar el N detalladamente;Tradicional
+borj2019;PAN12;2019;SVM;0.98;0.84;0.8;0.84;;;;155128;;Tradicional
+borj2019;PAN12;2019;Naive Bayes;0.98;0.92;0.72;0.83;;;;155128;No especifica tamaño de la BD, se asume el total de PAN12;Tradicional
+borj2019;PAN12;2019;Random Forest;0.95;0.9999;0.02;0.03;;;;155128;Lineal;Tradicional
+borj2020;PAN12;2020;SVM;0.99;0.96;0.93;0.95;0.95;0.94;;21619;;Tradicional
+borj2020;PAN12;2020;Naive Bayes;0.99;0.99;0.92;0.95;0.98;0.93;;21619;;Tradicional
+borj2020;PAN12;2020;Random Forest;0.93;0.9999;0.12;0.21;0.41;0.15;;21619;Lineal;Tradicional
+borj2021;PAN12;2021;Gradient Boosting;0.99;;;0.99;;;;21619;;Tradicional
+bours2019;PAN12;2019;Logistic Regression;;0.86;0.86;0.86;0.86;0.86;;20131;;Tradicional
+bours2019;PAN12;2019;Ridge;;0.89;0.87;0.88;0.89;0.87;;20131;;Deep Learning
+bours2019;PAN12;2019;Naive Bayes;;0.91;0.82;0.87;0.89;0.84;;20131;;Tradicional
+bours2019;PAN12;2019;SVM;;0.86;0.87;0.86;0.86;0.87;;20131;Mencionado como Neural Network;Tradicional
+bours2019;PAN12;2019;MLP;;0.84;0.87;0.85;0.85;0.86;;20131;NN original;Deep Learning
+cano2014;PJ;2014;SVM;;0.85;0.87;0.86;;;;50;conversaciones;Tradicional
+cardei2017;PAN;2017;SVM;;0.94;0.94;0.94;0.94;;;155128;Utiliza 2 algoritmos para generar una prediccion en cadena;Tradicional
+cardei2017;PAN;2017;Random Forest;;0.96;0.78;0.86;0.91;;;155128;Utiliza 2 algoritmos para generar una prediccion en cadena;Tradicional
+cheong2015;MovieStarPlanet (L15);2015;SVM;0.81;0.5;0.44;0.47;0.49;;;4451;Los datos son lineas de conversacion. No se explicita un dataset de entrenamient, por lo que se considera todo el conjunto como tal;Tradicional
+cheong2015;MovieStarPlanet (L15);2015;MLP;0.81;0.5;0.34;0.4;0.46;;;4451;;Deep Learning
+cheong2015;MovieStarPlanet (L15);2015;Decision Tree;0.83;0.57;0.48;0.52;0.55;;;4451;;Tradicional
+cheong2015;MovieStarPlanet (L15);2015;Logistic Regression;0.72;0.38;0.7;0.49;0.41;;;4451;;Tradicional
+cheong2015;MovieStarPlanet (L15);2015;Naive Bayes;0.8;0.45;0.44;0.46;0.47;;;4451;;Tradicional
+cheong2015;MovieStarPlanet (L15);2015;KNN;0.26;0.2;0.97;0.34;0.24;;;4451;;Tradicional
+cheong2015;MovieStarPlanet (W15);2015;SVM;0.92;0.91;0.68;0.77;0.85;;;29837;;Tradicional
+cheong2015;MovieStarPlanet (W15);2015;MLP;0.93;0.91;0.7;0.78;0.86;;;29837;;Deep Learning
+cheong2015;MovieStarPlanet (W15);2015;Decision Tree;0.91;0.8;0.73;0.74;0.78;;;29837;;Tradicional
+cheong2015;MovieStarPlanet (W15);2015;Logistic Regression;0.89;0.76;0.66;0.7;0.74;;;29837;;Tradicional
+cheong2015;MovieStarPlanet (W15);2015;Naive Bayes;0.79;0.78;0.72;0.57;0.51;;;29837;;Tradicional
+cheong2015;MovieStarPlanet (W15);2015;KNN;0.85;0.71;0.4;0.49;0.62;;;29837;;Tradicional
+cheong2015;MovieStarPlanet (HP15);2015;SVM;0.89;0.75;0.68;0.71;0.73;;;4608;;Tradicional
+cheong2015;MovieStarPlanet (HP15);2015;MLP;0.89;0.66;0.75;0.7;0.73;;;4608;;Deep Learning
+cheong2015;MovieStarPlanet (HP15);2015;Decision Tree;0.86;0.78;0.45;0.57;0.68;;;4608;;Tradicional
+cheong2015;MovieStarPlanet (HP15);2015;Logistic Regression;0.76;0.45;0.89;0.6;0.5;;;4608;;Tradicional
+cheong2015;MovieStarPlanet (HP15);2015;Naive Bayes;0.86;0.64;0.69;0.67;0.65;;;4608;;Tradicional
+cheong2015;MovieStarPlanet (HP15);2015;KNN;0.84;0.87;0.21;0.34;0.53;;;4608;;Tradicional
+dhouioui2016;Chat privado;2016;SVM;;;;0.75;;;;;No entrega valores concretos;Tradicional
+ebrahimi2016;PAN12;2016;MLP;;0.92;0.71;0.8;;;;155128;NN original;Deep Learning
+ebrahimi2016;PAN12;2016;CNN;;0.93;0.71;0.8;;;;155128;Preprocesamiento BoW;Deep Learning
+ebrahimi2016;PAN12;2016;SVM;;0.78;0.5;0.61;;;;155128;;Tradicional
+ebrahimiSuen2016;PAN12;2016;SVM;0.99;0.78;0.5;0.61;;;;155128;;Tradicional
+ebrahimiSuen2016;PAN12;2016;Naive Bayes;0.8;0.11;0.92;0.19;;;;155128;;Tradicional
+fauzi2020;PAN12;2020;Naive Bayes;1;0.98;0.99;0.98;0.98;;;17247;Multinomial;Tradicional
+fauzi2020;PAN12;2020;MLP;1;0.98;0.98;0.98;0.98;;;17247;NN original;Deep Learning
+fauzi2020;PAN12;2020;KNN;0.96;0.93;0.96;0.61;0.74;;;17247;;Tradicional
+fauzi2020;PAN12;2020;Logistic Regression;0.99;0.9999;0.94;0.97;0.98;;;17247;;Tradicional
+fauzi2020;PAN12;2020;Random Forest;0.92;0.9999;0.06;0.11;0.23;;;17247;;Tradicional
+fauzi2020;PAN12;2020;Decision Tree;0.96;0.8;0.77;0.78;0.79;;;17247;;Tradicional
+fauzi2020;PAN12;2020;SVM;1;0.9999;0.96;0.98;0.98;;;17247;;Tradicional
+gunawan2016;PJ y LITEROKA;2016;KNN;0.98;;;;;;;45;K=3 con All Features;Tradicional
+gunawan2016;PJ y LITEROKA;2016;SVM;0.99;;;;;;;45;Quadratic con 14 features;Tradicional
+hamzah2021;PAN12;2021;GRU;0.85;;;;;;;4040;Usan el 20% de los datos como test. el 60% como validacion;Deep Learning
+hamzah2021;PAN12;2021;BiLSTM;0.9;;;;;;;4040;;Deep Learning
+hamzah2021;PAN12;2021;Gradient Boosting;0.9;;;;;;;4040;;Tradicional
+hamzah2021;CSH;2021;BiLSTM;0.96;;;;;;;4880;;Deep Learning
+hamzah2021;CSH;2021;Gradient Boosting;0.87;;;;;;;4880;;Tradicional
+hamzah2021;CSH;2021;GRU;0.95;;;;;;;4880;;Deep Learning
+isaza2022;PAN12;2022;CNN;0.86;0.27;0.77;0.4;;;0.86;1936816;;Deep Learning
+kim2020;PAN12;2020;RNN;;0.91;0.94;0.91;0.91;;;96;Usa diversos LSTM unidos a una capa densa;Deep Learning
+kirupalini2021;PJ, IRC, FUGLY;2021;SVM;0.91;0.9;0.95;0.93;;;;;;Tradicional
+kirupalini2021;PJ, IRC, FUGLY;2021;Random Forest;0.94;0.86;1;0.92;;;;;;Tradicional
+kirupalini2021;PJ, IRC, FUGLY;2021;Naive Bayes;0.94;0.86;1;0.92;;;;;;Tradicional
+kirupalini2021;PJ, IRC, FUGLY;2021;KNN;0.91;0.81;1;0.89;;;;;;Tradicional
+kirupalini2021;PJ, IRC, FUGLY;2021;Adaboost;0.91;0.76;1;0.86;;;;;No explicita la cantidad de datos usados EXCLUIDO;Tradicional
+michalopoulos2014;PJ;2014;SVM;0.72;;;;;;;170;;Tradicional
+michalopoulos2014;PJ;2014;KNN;0.95;;;;;;;170;K=24;Tradicional
+michalopoulos2014;PJ;2014;Naive Bayes;0.96;;;;;;;170;;Tradicional
+milon2022;PJ e IRC;2022;MLP;;;;0.76;;;;;No entrega valores para accuracy o precision, solamente F1. Datos  no recogidos por dificultad;Deep Learning
+misra2019;PJ y PAN12;2019;CNN;;;;0.45;;;;;No entrega los datos concretos como chat o mensajes. Entrega resultado como F1;Deep Learning
+morris2013;PAN12;2013;SVM;;0.57;0.18;0.27;;;;;Los datos son autores, no conversaciones;Tradicional
+munoz2021;PAN 12 modificado + otra fuente no mencionada;2021;CNN;0.9;;0.7;0.42;;;;1936816;Se asume la utilizacion de otra fuente, porque PAN12 no tiene +1millon de conversaciones segun su mismo documento;Deep Learning
+ngejane2021;PAN12 training;2021;Logistic Regression;0.99;0.92;0.57;0.71;;;;16730;;Tradicional
+ngejane2021;PAN12 training;2021;Gradient Boosting;0.98;0.89;0.43;0.58;;;;16730;;Tradicional
+ngejane2021;PAN12 training;2021;MLP;0.99;0.78;0.7;0.74;;;;16730;;Deep Learning
+ngejane2021;PAN12 training;2021;BiLSTM;0.98;0.64;0.71;0.71;;;;16730;;Deep Learning
+pandey2012;PJ y Omegle;2012;SVM;0.76;;;;;;;;Revisar;Tradicional
+parapar2014;PAN12;2014;SVM;;0.95;0.64;0.76;;;;155128;tf/idf(1g,3g)+chat-based;Tradicional
+peersman2012;PAN12 training - Split 1;2012;SVM;;0.94;0.85;0.9;;;;17619;;Tradicional
+pranoto2015;PJ;2015;Logistic Regression;0.95;0.96;0.98;0.97;;;;59;;Tradicional
+ringenberg2019;PJ;2019;CNN;;;;;;;;;Construye un Fuzzy con CNN pero no entrega metricas usables;Deep Learning
+suhartono2019;PJ;2019;BPNN;0.68;;;;;;;50;No es MLP?;Deep Learning
+preub2021;PAN12;2021;MLP;;0.75;0.98;0.85;0.79;0.92;;20788;PAN12 se encuentra filtrado;Deep Learning
+vartapetiance2014;PAN12;2014;SVM;;0.95;0.64;0.76;;;;155128;Se asumen los resultados como test;Tradicional
+vartapetiance2014;PAN12;2014;Naive Bayes;;0.81;0.09;0.16;;;;155128;;Tradicional
+vartapetiance2014;PAN12;2014;Decision Tree;;0.82;0.36;0.5;;;;155128;;Tradicional
+vogt2021;PAN12 y Chatcoder;2021;BERT;;0.82;0.96;0.89;;;;13159;BERT-Large;Deep Learning
+zambrano2019;PJ;2019;Linear Regression;0.98;;;;;;;30;Linear model;Tradicional
+zou2018;PAN'13 y conversaciones no especificadas;2018;Naive Bayes;0.68;;;;;;;1000;todos con 30 features;Tradicional
+zou2018;PAN'13 y conversaciones no especificadas;2018;Random Forest;0.69;;;;;;;1000;;Tradicional
+zou2018;PAN'13 y conversaciones no especificadas;2018;Adaboost;0.7;;;;;;;1000;;Tradicional
+zou2018;PAN'13 y conversaciones no especificadas;2018;Logistic Regression;0.73;;;;;;;1000;;Tradicional
+zuo2019;PAN'13 y conversaciones no especificadas;2019;BPNN;0.77;;;;;;;1000;;Deep Learning

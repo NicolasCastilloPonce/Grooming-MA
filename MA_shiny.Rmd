@@ -1,0 +1,141 @@
+---
+title: "MA Machine Learning"
+author: "Nicolas"
+date: "2023-04-01"
+output: html_document
+runtime: shiny
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Librerias
++ `metafor`: Permite la creación de meta-análisis en R
++ `readr`: Permite la lectura de archivos .csv
++ `dplyr`: Permite la manipulación de datos de forma más simple
+
+```{r message=FALSE, include=FALSE}
+library(metafor)
+library(readr)
+library(dplyr)
+```
+
+## Carga y preparación de los datos
+
+```{r}
+# Carga base de datos
+data <- read_delim("D:/Metanalisis/BDMeta.csv", delim = ";")
+
+# Transforma columnas de identificador y modelo a factor
+data$Identificador <- as.factor(data[["Identificador"]])
+data$Modelo <- as.factor(data[["Modelo"]])
+
+# Redondea ellos valores de la columna N (cantidad de datos experimentales)
+data$N <- round(as.numeric(data$N), 0)
+```
+
+## Función que permite el calculo de la varianza
+```{r}
+variance <- function (p, ni) {
+  p*(1-p)/ni
+}
+```
+
+## Función que construye el forest plot
+```{r}
+forest_plot <- function(fsn, ma) {
+  forest(ma, showweights = TRUE, 
+         mlab=paste("\nk =",ma$k, "; I^2=", formatC(ma$I2, digits=2, format = "f"), "%; p",
+                    scales::pvalue(ma$pval), "\nFail-Safe N: ", formatC(fsn$fsnum, digits=0, format = "f")),
+         )
+  print(fsn$fsnum)
+}
+```
+
+
+## Calculo de la varianza para las métricas de Accuracy, Precision, Recall y F1
+```{r}
+# Calculo de varianzas para Accuracy, Precision, Recall, F1
+data <- data %>%
+  filter(!is.na(N)) %>%
+  mutate(vi.acc = variance(ACC, N), vi.p = variance(P, N), vi.r = variance(R, N), 
+         vi.f1 = variance(F1, N), vi.f05 = variance(F05, N))
+```
+
+
+## Metanalisis
+Aquí se van a mostrar los random forest sobre los diversos algoritmos y métricas
+
+```{r ml, echo=FALSE}
+algorithms <- levels(data$Modelo)
+inputPanel(
+  selectInput("ml_alg", label = "Algoritmos: ",
+              choices = algorithms, selected = algorithms[1]),
+)
+```
+
+### Metanalisis sobre Accuracy
+
+```{r}
+
+#print(fail_safe$fsnum)
+renderPlot({
+  fail_safe = data %>%
+    filter(Modelo == input$ml_alg) %>%
+    fsn(yi = ACC, vi = vi.acc, data=., type="Rosenberg")
+  ma = data %>%
+    filter(Modelo == input$ml_alg) %>%
+    rma(yi = ACC, vi = vi.acc, data = ., slab = Identificador)
+  forest_plot(fsn = fail_safe, ma = ma)
+})
+```
+
+
+### Metanalisis sobre Precision
+
+```{r}
+
+#print(fail_safe$fsnum)
+renderPlot({
+  fail_safe = data %>%
+    filter(Modelo == input$ml_alg) %>%
+    fsn(yi = P, vi = vi.p, data=., type="Rosenberg")
+  ma = data %>%
+    filter(Modelo == input$ml_alg) %>%
+    rma(yi = P, vi = vi.p, data = ., slab = Identificador)
+  forest_plot(fsn = fail_safe, ma = ma)
+})
+```
+
+### Metanalisis sobre Recall
+
+```{r}
+
+#print(fail_safe$fsnum)
+renderPlot({
+  fail_safe = data %>%
+    filter(Modelo == input$ml_alg) %>%
+    fsn(yi = R, vi = vi.r, data=., type="Rosenberg")
+  ma = data %>%
+    filter(Modelo == input$ml_alg) %>%
+    rma(yi = R, vi = vi.r, data = ., slab = Identificador)
+  forest_plot(fsn = fail_safe, ma = ma)
+})
+```
+
+### Metanalisis sobre F1
+
+```{r}
+
+#print(fail_safe$fsnum)
+renderPlot({
+  fail_safe = data %>%
+    filter(Modelo == input$ml_alg) %>%
+    fsn(yi = F1, vi = vi.f1, data=., type="Rosenberg")
+  ma = data %>%
+    filter(Modelo == input$ml_alg) %>%
+    rma(yi = F1, vi = vi.f1, data = ., slab = Identificador)
+  forest_plot(fsn = fail_safe, ma = ma)
+})
+```
